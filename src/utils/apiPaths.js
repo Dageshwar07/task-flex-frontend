@@ -1,4 +1,4 @@
-export const BASE_URL = 'http://localhost:8000'; // Base URL for the API
+export const BASE_URL = 'https://task-manager-5is3.onrender.com'||'http://localhost:8000'; // Base URL for the API
 
 // API Path configurations for all endpoints
 export const API_PATHS = {
