@@ -52,7 +52,7 @@ const UserProvider = ({ children }) => {
   const updateUser = (userData) => {
     // Ensure the profileImageUrl is absolute
     if (userData.profileImageUrl && !userData.profileImageUrl.startsWith('http')) {
-      userData.profileImageUrl = `${process.env.VITE_API_URL || 'http://localhost:8000'}${userData.profileImageUrl}`;
+      userData.profileImageUrl = `${process.env.VITE_API_URL || 'https://task-manager-5is3.onrender.com'}${userData.profileImageUrl}`;
     }
     setUser(userData);
     setLoading(false);
