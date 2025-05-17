@@ -20,7 +20,7 @@ const Navbar = ({activeMenu}) => {
         )}
     </button>
 
-    <h2 className='text-lg font-medium text-black'>Task Flex</h2>
+    <h2 className='text-lg font-medium text-black'>Task manager</h2>
     {openSideMenu && (
         <div className="fixed top-[61px] -ml-4 bg-white">
             <SideMenu activeMenu={activeMenu} />
