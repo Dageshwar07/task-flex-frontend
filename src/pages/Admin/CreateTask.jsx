@@ -15,7 +15,6 @@ import Modal from '../../components/layouts/Modal'
 import DeleteAlert from '../../components/layouts/DeleteAlert'
 
 const CreateTask = () => {
-
   const location = useLocation();
   const { taskId } = location.state || {};
   const navigate = useNavigate();
@@ -40,8 +39,6 @@ const CreateTask = () => {
   };
 
   const clearData = () => {
-
-    // reset form
     setTaskData({
       title: "",
       description: "",
@@ -170,7 +167,7 @@ const CreateTask = () => {
   // Delete Task
   const deleteTask = async () => {
     try {
-      await axiosInstance.delete(API_PATHS.TASKS.DELETE_TASKS(taskId));
+      await axiosInstance.delete(API_PATHS.TASKS.DELETE_TASK(taskId));
       setOpenDeleteAlert(false);
       toast.success("Task deleted succesfully");
       navigate('/admin/tasks')
@@ -260,7 +257,7 @@ const CreateTask = () => {
               <label className="text-xs font-medium text-slate-600 ">
                 TODO Checklist
               </label>
-
+{console.log("---->",taskData)}
               <TodoListInput
                 todoList={taskData?.todoChecklist}
                 setTodoList={(value) => handleValueChange("todoChecklist", value)} />
