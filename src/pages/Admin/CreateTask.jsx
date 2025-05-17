@@ -96,6 +96,7 @@ const CreateTask = () => {
       );
 
       toast.success("Task Updated Successfully");
+      navigate('/admin/tasks')
     } catch (error) {
       console.error("Error creating task:", error);
       setLoading(false);
